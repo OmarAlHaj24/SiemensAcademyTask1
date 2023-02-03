@@ -13,8 +13,12 @@ Packet* Factory::createPacket(string packet)
     {
         return new EcpriEthernetPacket(packet);
     }
-    else
+    else if(packetType == "88F7")
     {
         return new EthernetPacket(packet);
+    }
+    else
+    {
+        return nullptr;
     }
 }

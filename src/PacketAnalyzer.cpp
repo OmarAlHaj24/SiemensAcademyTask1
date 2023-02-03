@@ -32,7 +32,15 @@ void PacketAnalyzer::analyze()
     string packet = getNextPacket();
     while (packet != "")
     {
-        packets.push_back(Factory::createPacket(packet));
+        Packet* tempPacket = Factory::createPacket(packet);
+        if(tempPacket != nullptr)
+        {
+            packets.push_back(tempPacket);
+        }
+        else
+        {
+            cout << "Packet is not supported" << endl;
+        }
         packet = getNextPacket();
     }
 }
