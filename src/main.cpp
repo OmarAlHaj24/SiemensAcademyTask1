@@ -1,6 +1,10 @@
 #include <iostream>
+#include "PacketAnalyzer.h"
+using namespace std;
 
 int main(int argc, char *argv[])
 {
-	std::cout << "Hello world!" << std::endl;
+	PacketAnalyzer packetAnalyzer("input_packets", "output.txt");
+	packetAnalyzer.analyze();
+	packetAnalyzer.print();
 }
