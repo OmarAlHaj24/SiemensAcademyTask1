@@ -1,8 +1,8 @@
 #include "EcpriEthernetPacket.h"
 
-EcpriEthernetPacket:: EcpriEthernetPacket(string packet) : EthernetPacket(packet)
+EcpriEthernetPacket::EcpriEthernetPacket(string packet) : EthernetPacket(packet)
 {
-    //initialize the variables in bytes and hexadecimals
+    // initialize the variables in bytes and hexadecimals
     protcolVersion = data.substr(0, 1);
     reserved = "0";
     concatinationIndicator = data.substr(1, 1);

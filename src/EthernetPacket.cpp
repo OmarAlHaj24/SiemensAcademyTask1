@@ -5,7 +5,7 @@ using namespace std;
 
 EthernetPacket::EthernetPacket(string packet)
 {
-    //initialize the variables in bytes and hexadecimals
+    // initialize the variables in bytes and hexadecimals
     this->packet = packet;
     preamble = packet.substr(0, 16);
     destinationAddress = packet.substr(16, 12);

@@ -6,14 +6,14 @@ string Factory::getPacketType(string packet)
     return packetType;
 }
 
-Packet* Factory::createPacket(string packet)
+Packet *Factory::createPacket(string packet)
 {
     string packetType = getPacketType(packet);
     if (packetType == "AEFE")
     {
         return new EcpriEthernetPacket(packet);
     }
-    else if(packetType == "88F7")
+    else if (packetType == "88F7")
     {
         return new EthernetPacket(packet);
     }

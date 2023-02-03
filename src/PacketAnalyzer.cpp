@@ -32,8 +32,8 @@ void PacketAnalyzer::analyze()
     string packet = getNextPacket();
     while (packet != "")
     {
-        Packet* tempPacket = Factory::createPacket(packet);
-        if(tempPacket != nullptr)
+        Packet *tempPacket = Factory::createPacket(packet);
+        if (tempPacket != nullptr)
         {
             packets.push_back(tempPacket);
         }

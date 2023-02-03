@@ -8,6 +8,7 @@ class Factory
 
 private:
     static string getPacketType(string packet);
+
 public:
-    static Packet* createPacket(string packet);
+    static Packet *createPacket(string packet);
 };

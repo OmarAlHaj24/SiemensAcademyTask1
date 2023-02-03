@@ -15,6 +15,7 @@ private:
     string RtcID;
     string sequenceID;
     string newData;
+
 public:
     EcpriEthernetPacket(string packet);
     void print() override;
