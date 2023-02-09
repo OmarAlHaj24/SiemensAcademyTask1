@@ -4,7 +4,15 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-	PacketAnalyzer packetAnalyzer("input_packets", "output.txt");
+	//inputFileName = "input_packets";
+	//outputFileName = "output_packets";
+	cout << "Please enter the name of the input file: ";
+	string inputFileName;
+	cin >> inputFileName;
+	cout << "Please enter the name of the output file: ";
+	string outputFileName;
+	cin >> outputFileName;
+	PacketAnalyzer packetAnalyzer(inputFileName, outputFileName);
 	packetAnalyzer.analyze();
 	packetAnalyzer.print();
 }
